@@ -24,5 +24,11 @@ To correct heading and pivot left, motor `M4` power is reduced to 20% while moto
 Default Forward Movement (`else`)
 When both sensors detect identical surface conditions (either both on the light background or both over a line node), equal power of 40% is delivered to both motors (`M3` and `M4`) to drive straight ahead.
 <img width="1254" height="774" alt="image" src="https://github.com/user-attachments/assets/f39c6bf6-5e34-4ce8-b4e8-8bfe4029b550" />
+IT IS A SIMULATION OF THE CODE IN TRIK:
+
+
+
+https://github.com/user-attachments/assets/e44e1d82-86dd-442e-93a1-7565327d5bc5
+
 
 
