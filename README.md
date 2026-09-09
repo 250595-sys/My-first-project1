@@ -3,13 +3,9 @@
 
 The project controls a Pioneer two-wheeled differential drive robot using dual analog light sensors (`A1` and `A2`) to follow a dark line path on a bright surface.
 Sensor Reading & Motor Control Table
-
-| Sensor `A1` (Left) | Sensor `A2` (Right) | Action   | Left Motor (`M3`) | Right Motor (`M4`) |
-|                    |                     |          |                   |                    |
-|  < 5    (On Line)  |   > 5  (Off Line)   |S Right   |      20%          |        40%         |
-|  > 5    (Off Line) |   < 5  (On Line)    |S Left    |     40%           |        20%         |
-|  > 5    (Off Line) |   > 5    (Off Line) |D Straight|     40%           |        40%         |
-|  < 5    (On Line)  |   < 5    (On Line)  |D Straight|     40%           |        40%         |
+Steer Right: When the left sensor (`A1`) detects the dark line (value under 5) and the right sensor (`A2`) detects the light floor (value over 5), the left motor (`M3`) drops to 20% power while the right motor (`M4`) runs at 40% power to pivot the robot right.
+Steer Left: When the left sensor (`A1`) detects the light floor (value over 5) and the right sensor (`A2`) detects the dark line (value under 5), the right motor (`M4`) drops to 20% power while the left motor (`M3`) runs at 40% power to pivot the robot left.
+Drive Straight: When both sensors detect the light floor (both values over 5) or both sensors cross the line together (both values under 5), both motors (`M3` and `M4`) run at an equal baseline speed of 40% power to move directly forward.
 
 ⚙️ Step-by-Step Logic Breakdown
 
